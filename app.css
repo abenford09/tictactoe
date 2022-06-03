@@ -1,0 +1,154 @@
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    font-size: 2em;
+}
+
+.right-border{
+    border-right: 3px solid orchid;
+}
+
+.bottom-border{
+    border-bottom: 3px solid orchid;
+}
+
+.line {
+    position: absolute;
+    background-color: green;
+}
+
+.line-row-top {
+    width: 100%;
+    height: 4px;
+    top: 15%
+}
+
+.line-row-middle {
+    width: 100%;
+    height: 4px;
+    top: 49%
+}
+
+.line-row-bottom {
+    width: 100%;
+    height: 4px;
+    top: 83%
+}
+
+.line-column-1 {
+    width: 4px;
+    height: 100%;
+    left: 15%
+}
+
+.line-column-2 {
+    width: 4px;
+    height: 100%;
+    left: 49%
+}
+
+.line-column-3 {
+    width: 4px;
+    height: 100%;
+    left: 83%
+}
+
+.line-diagonal-LR {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.line-diagonal-RL {
+    width: 90%;
+    height: 4px;
+    bottom: 50%;
+    right: 5%;
+    transform: skewY(135deg);
+}
+
+
+#players{
+    flex-wrap: center;
+    background-color: grey;
+    margin:auto;
+    padding-bottom: 3px;
+}
+
+.PlayerOne{
+    text-align: left;
+}
+
+h1 {
+    font-size: 3em;
+    font-style: italic;
+    color: aqua;
+    margin-bottom: 40px; 
+}
+
+h2 {
+   color: aqua; 
+}
+
+h3 {
+    color: aqua;
+}
+
+#gameover {
+    text-align: center;
+    border: orchid 8px solid;
+    padding: 35px;
+    width: 50%;
+    margin-top: 50px;
+}
+
+h4 {
+    font-size: 25px;
+    color: aqua;
+}
+
+button {
+    background-color: transparent;
+    color: aqua;
+    border: aqua 2.5px solid;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+   display: visible; 
+}
+
+.x-hover:hover::after {
+    content: "X";
+    opacity: 0.3;
+}
+
+.o-hover:hover::after {
+    content: "O";
+    opacity: 0.3;
+}
